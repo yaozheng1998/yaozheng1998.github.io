@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Sat Jan 06 2018 16:26:32 GMT+0800">
-        <meta property="article:modified_time" content="Mon Jan 08 2018 16:38:27 GMT+0800">
+        <meta property="article:modified_time" content="Mon Jan 08 2018 17:25:43 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/01/06/C-Review/index.html",
     "headline": "C++-Review",
     "datePublished": "Sat Jan 06 2018 16:26:32 GMT+0800",
-    "dateModified": "Mon Jan 08 2018 16:38:27 GMT+0800",
+    "dateModified": "Mon Jan 08 2018 17:25:43 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "YZ",
@@ -346,7 +346,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#C-程序设计语言的设计理念，演化历程，与C的关系"><span class="post-toc-number">1.</span> <span class="post-toc-text">C++程序设计语言的设计理念，演化历程，与C的关系</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Constructor"><span class="post-toc-number">2.</span> <span class="post-toc-text">Constructor</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#C-绑定"><span class="post-toc-number">3.</span> <span class="post-toc-text">C++绑定</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#C-类提供的6个成员函数，如class-Empty"><span class="post-toc-number">4.</span> <span class="post-toc-text">C++类提供的6个成员函数，如class Empty{ }</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建对象"><span class="post-toc-number">5.</span> <span class="post-toc-text">创建对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#虚函数形参"><span class="post-toc-number">6.</span> <span class="post-toc-text">虚函数形参</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#C-程序设计语言的设计理念，演化历程，与C的关系"><span class="post-toc-number">1.</span> <span class="post-toc-text">C++程序设计语言的设计理念，演化历程，与C的关系</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Constructor"><span class="post-toc-number">2.</span> <span class="post-toc-text">Constructor</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#C-绑定"><span class="post-toc-number">3.</span> <span class="post-toc-text">C++绑定</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#C-类提供的6个成员函数，如class-Empty"><span class="post-toc-number">4.</span> <span class="post-toc-text">C++类提供的6个成员函数，如class Empty{ }</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建对象"><span class="post-toc-number">5.</span> <span class="post-toc-text">创建对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#虚函数"><span class="post-toc-number">6.</span> <span class="post-toc-text">虚函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#成员初始化表"><span class="post-toc-number">7.</span> <span class="post-toc-text">成员初始化表</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#C-程序设计应该遵守的原则"><span class="post-toc-number">8.</span> <span class="post-toc-text">C++程序设计应该遵守的原则</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#操作符重载"><span class="post-toc-number">9.</span> <span class="post-toc-text">操作符重载</span></a></li></ol>
     </ul>
     
 
@@ -498,7 +498,6 @@
 <li>拷贝构造函数是构造函数，不返回值；生成一个全新的对象，函数调用之前对象是不存在的；</li>
 <li>赋值函数需要返回一个对象自身的引用，以便赋值之后的操作；是对两个已有对象的操作。</li>
 </ol>
-<p>​</p>
 <ol>
 <li><p>指针常量VS常量指针</p>
 <p>char greeting[] = “Hello”;</p>
@@ -530,8 +529,18 @@
 <p>Student student（20）；栈空间</p>
 <p>Student *student = new Student (20) ; 堆内存空间</p>
 <p><a href="http://blog.csdn.net/jackystudio/article/details/11523353" target="_blank" rel="noopener">http://blog.csdn.net/jackystudio/article/details/11523353</a></p>
-<h3 id="虚函数形参"><a href="#虚函数形参" class="headerlink" title="虚函数形参"></a>虚函数形参</h3><p>有默认值，则派生类形参不论有无默认值，当用指向派生类的基类指针调用派生类 虚函数时就会被基类的默认值覆盖。</p>
+<h3 id="虚函数"><a href="#虚函数" class="headerlink" title="虚函数"></a>虚函数</h3><p>虚函数形参有默认值，则派生类形参不论有无默认值，当用指向派生类的基类指针调用派生类 虚函数时就会被基类的默认值覆盖。</p>
 <p><a href="http://blog.csdn.net/bigzhao_25/article/details/52123803" target="_blank" rel="noopener">http://blog.csdn.net/bigzhao_25/article/details/52123803</a></p>
+<p>关于为何非成员函数，静态成员函数，内联成员函数，构造函数，友元函数不能时虚函数？</p>
+<p><a href="http://blog.csdn.net/ta893115871/article/details/8194836" target="_blank" rel="noopener">http://blog.csdn.net/ta893115871/article/details/8194836</a></p>
+<h3 id="成员初始化表"><a href="#成员初始化表" class="headerlink" title="成员初始化表"></a>成员初始化表</h3><p>派生类的构造函数的初始化列表可以包含基类的构造函数、派生类成员的初始化，但是不能有基类成员的初始化！</p>
+<p><a href="http://blog.csdn.net/libaineu2004/article/details/19565229" target="_blank" rel="noopener">http://blog.csdn.net/libaineu2004/article/details/19565229</a></p>
+<h3 id="C-程序设计应该遵守的原则"><a href="#C-程序设计应该遵守的原则" class="headerlink" title="C++程序设计应该遵守的原则"></a>C++程序设计应该遵守的原则</h3><p>1) Use const whenever possible;</p>
+<p>2) Guard against potential ambiguity;<br>3) Strive for exception-safe code;<br>4) Use destructor to prevent resource leaks；</p>
+<p>5）尽量使用初始化列表而不是赋值。一个好的原则是，能使用初始化列表的时候尽量使用初始化列表</p>
+<h3 id="操作符重载"><a href="#操作符重载" class="headerlink" title="操作符重载"></a>操作符重载</h3><p>a++ VS ++a</p>
+<p>a++：Counter operator ++ ( int ) { Counter temp = *this; value++; return temp; }</p>
+<p>++a：Counter&amp; operator ++ ( ) { value++; return *this; }</p>
 
         
     
