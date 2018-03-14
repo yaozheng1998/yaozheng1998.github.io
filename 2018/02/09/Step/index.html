@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Fri Feb 09 2018 16:39:14 GMT+0800">
-        <meta property="article:modified_time" content="Sat Mar 10 2018 22:34:50 GMT+0800">
+        <meta property="article:modified_time" content="Wed Mar 14 2018 21:02:37 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/02/09/Step/index.html",
     "headline": "Step",
     "datePublished": "Fri Feb 09 2018 16:39:14 GMT+0800",
-    "dateModified": "Sat Mar 10 2018 22:34:50 GMT+0800",
+    "dateModified": "Wed Mar 14 2018 21:02:37 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "YZ",
@@ -499,6 +499,15 @@
 <li><p>&lt;%…%&gt;：java代码片段(常用)，用于定义0~N条Java语句,方法内能写什么，它就可以放什么;  </p>
 <p>&lt;%=…%&gt;：java表达式，用于输出(常用)，用于输出一条表达式（或变量）的结果。response.getWriter().print( … );这里能放什么，它就可以放什么; </p>
 <p>&lt;%!…%&gt;：声明，用来创建类的成员变量和成员方法(基本不用，但容易被考到)，类体中可以放什么(成员，方法。。)，它就可以放什么……</p>
+</li>
+<li><p>struts ajax 不能跳转到xml配置的地址？</p>
+</li>
+<li><p>ajax data参数在action里必须有get set方法，否则如int默认为0；</p>
+</li>
+<li><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params">isConfirm</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (isConfirm) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> g=<span class="number">1</span>;g&lt;=num;g++)&#123;</span><br><span class="line">            $.ajax(&#123;</span><br><span class="line">                type:<span class="string">"post"</span>,</span><br><span class="line">                url:<span class="string">"../orderCourse"</span>,</span><br><span class="line">                <span class="keyword">async</span>:<span class="literal">true</span>,</span><br><span class="line">                data:&#123;</span><br><span class="line">                    student_name:<span class="built_in">document</span>.getElementById(<span class="string">"n"</span>+g).value,</span><br><span class="line">                    class_name:<span class="built_in">document</span>.getElementById(<span class="string">"s"</span>+g).value,</span><br><span class="line">                    phone:<span class="built_in">document</span>.getElementById(<span class="string">"t"</span>+g).value,</span><br><span class="line">                &#125;,</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        swal(<span class="string">"支付!"</span>, <span class="string">"支付成功！"</span>, <span class="string">"success"</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">        swal(<span class="string">"取消"</span>, <span class="string">"订单将在15分钟后失效，请尽快支付！"</span>, <span class="string">"error"</span>)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>ajax循环问题；【我不用异步貌似就对了】js异步问题！<a href="http://blog.csdn.net/yuan882696yan/article/details/50296821" target="_blank" rel="noopener">http://blog.csdn.net/yuan882696yan/article/details/50296821</a></p>
+</li>
+<li><p>quartz版本集成问题 <a href="http://blog.csdn.net/liuchuanhong1/article/details/54017941" target="_blank" rel="noopener">http://blog.csdn.net/liuchuanhong1/article/details/54017941</a></p>
 </li>
 <li><p>​</p>
 </li>
