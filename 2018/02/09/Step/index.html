@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Fri Feb 09 2018 16:39:14 GMT+0800">
-        <meta property="article:modified_time" content="Wed Mar 14 2018 21:02:37 GMT+0800">
+        <meta property="article:modified_time" content="Mon Mar 19 2018 00:30:48 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/02/09/Step/index.html",
     "headline": "Step",
     "datePublished": "Fri Feb 09 2018 16:39:14 GMT+0800",
-    "dateModified": "Wed Mar 14 2018 21:02:37 GMT+0800",
+    "dateModified": "Mon Mar 19 2018 00:30:48 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "YZ",
@@ -509,6 +509,19 @@
 </li>
 <li><p>quartz版本集成问题 <a href="http://blog.csdn.net/liuchuanhong1/article/details/54017941" target="_blank" rel="noopener">http://blog.csdn.net/liuchuanhong1/article/details/54017941</a></p>
 </li>
+<li><p>jdbc read-only问题 配置tx事务管理</p>
+</li>
+<li><p>order change 关键字</p>
+</li>
+<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#courses"</span>).change(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">       type:<span class="string">"post"</span>,</span><br><span class="line">        url:<span class="string">"getCO"</span>,</span><br><span class="line">        <span class="keyword">async</span>:<span class="literal">false</span>,</span><br><span class="line">        data:&#123;</span><br><span class="line">           course_id:<span class="built_in">document</span>.getElementById(<span class="string">"courses"</span>).value.split(<span class="string">"-"</span>)[<span class="number">0</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">        success:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  ...</span><br><span class="line">  public <span class="built_in">String</span> getClassFromOne()&#123;</span><br><span class="line">        List&lt;Classroom&gt; list=classService.getClassOfOneCourse(course_id);</span><br><span class="line">        System.out.println(list.size());</span><br><span class="line">        request.setAttribute(<span class="string">"Ucourses"</span>,list);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"CO"</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>​       jsp通过ajax,success当中无法获得request.get…所以将取值放在success外面。</p>
+<p>​      modal 不能得到requset的值？ session 👌</p>
+<ol>
+<li><p>select coalesce(sum(money),0) from <code>orders</code> where vip_name=’yz’</p>
+<p>解决sum, max返回NULL问题。</p>
+</li>
 <li><p>​</p>
 </li>
 </ol>
@@ -531,6 +544,14 @@
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
+    
+        <a href="/2018/03/15/求职小白/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
     
 
     <!-- Section Spacer -->
@@ -630,7 +651,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">4</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">4</span></a>
             </ul>
         </li>
         
