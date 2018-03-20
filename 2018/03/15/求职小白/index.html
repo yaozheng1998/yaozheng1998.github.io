@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",notes">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -235,11 +235,11 @@
     <meta property="og:title" content="求职小白 | Mirth">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="notes"> 
 
     
         <meta property="article:published_time" content="Thu Mar 15 2018 18:21:19 GMT+0800">
-        <meta property="article:modified_time" content="Thu Mar 15 2018 18:21:19 GMT+0800">
+        <meta property="article:modified_time" content="Tue Mar 20 2018 15:52:26 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/03/15/求职小白/index.html",
     "headline": "求职小白",
     "datePublished": "Thu Mar 15 2018 18:21:19 GMT+0800",
-    "dateModified": "Thu Mar 15 2018 18:21:19 GMT+0800",
+    "dateModified": "Tue Mar 20 2018 15:52:26 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "YZ",
@@ -280,7 +280,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": "",
+    "keywords": ",notes",
     "description": "",
 }
 </script>
@@ -339,6 +339,15 @@
 
     <!-- Left aligned menu below button -->
     
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#面试题"><span class="post-toc-number">1.</span> <span class="post-toc-text">面试题</span></a></li></ol>
+    </ul>
     
 
 
@@ -406,6 +415,15 @@
 
     <!-- Tags (bookmark) -->
     
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/notes/">notes</a>
+    </ul>
+    
 
     <!-- Share -->
     
@@ -460,7 +478,52 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <script src="/assets/js/APlayer.min.js"> </script>
+        <script src="/assets/js/APlayer.min.js"> </script><ul>
+<li><p>Java多线程</p>
+<p>sleep不会释放锁，即使当前线程sleep，其他线程也无法访问其持有的对象；相当于阻塞状态</p>
+<p>yield不会释放锁，只能让拥有相同或更高优先级的线程获取CPU执行时间；重回就绪状态</p>
+<p>start启动线程，run只是定义需要执行的任务</p>
+<p><a href="http://www.importnew.com/21136.html" target="_blank" rel="noopener">http://www.importnew.com/21136.html</a></p>
+<h2 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h2><p><strong>线程和进程有什么区别？</strong><br>答：一个进程是一个独立(self contained)的运行环境，它可以被看作一个程序或者一个应用。而线程是在进程中执行的一个任务。线程是进程的子集，一个进程可以有很多线程，每条线程并行执行不同的任务。<u>不同的进程使用不同的内存空间，而所有的线程共享一片相同的内存空间</u>。别把它和栈内存搞混，每个线程都拥有单独的栈内存用来存储本地数据。</p>
+<p><strong>如何在Java中实现线程？</strong><br>答：<br>创建线程有两种方式：<br>一、继承 Thread 类，扩展线程。<br>二、实现 Runnable 接口。</p>
+<p>三、实现Callable接口</p>
+<p><strong>启动一个线程是调用run()还是start()方法？</strong><br>答：启动一个线程是调用start()方法，使线程所代表的虚拟处理机处于可运行状态，这意味着它可以由JVM 调度并执行，这并不意味着线程就会立即运行。run()方法是线程启动后要进行回调（callback）的方法。</p>
+<p><strong>Thread类的sleep()方法和对象的wait()方法都可以让线程暂停执行，它们有什么区别?</strong><br>答：sleep()方法（休眠）是线程类（Thread）的静态方法，调用此方法会让当前线程暂停执行<u>指定的时间</u>，将执行机会（CPU）让给其他线程，但是对象的锁依然保持，因此休眠时间结束后会<u>自动恢复</u>（线程回到就绪状态）。wait()是Object类的方法，调用对象的wait()方法导致当前线程<u>放弃对象的锁</u>（线程暂停执行），进入对象的等待池（wait pool），只有调用对象的notify()方法（或notifyAll()方法）时才能唤醒等待池中的线程进入等锁池（lock pool），如果线程重新获得对象的锁就可以进入就绪状态。</p>
+<p><strong>线程的sleep()方法和yield()方法有什么区别？</strong><br>① sleep()方法给其他线程运行机会时不考虑线程的优先级，因此会给低优先级的线程以运行的机会；yield()方法只会给相同优先级或更高优先级的线程以运行的机会；<br>② 线程执行sleep()方法后转入阻塞状态，而执行yield()方法后转入就绪状态；<br>③ sleep()方法声明抛出InterruptedException，而yield()方法没有声明任何异常；<br>④ sleep()方法比yield()方法（跟操作系统CPU调度相关）具有更好的可移植性。</p>
+<p><strong>请说出与线程同步以及线程调度相关的方法。</strong></p>
+<ul>
+<li>wait()：使一个线程处于等待（阻塞）状态，并且释放所持有的对象的锁；</li>
+<li>sleep()：使一个正在运行的线程处于睡眠状态，是一个<u>静态方法</u>，调用此方法要处理InterruptedException异常；</li>
+<li>notify()：唤醒一个处于等待状态的线程，当然在调用此方法的时候，并不能确切的唤醒某一个等待状态的线程，而是由JVM确定唤醒哪个线程，而且与优先级无关；</li>
+<li>notityAll()：唤醒所有处于等待状态的线程，该方法并不是将对象的锁给所有线程，而是让它们竞争，只有获得锁的线程才能进入就绪状态；</li>
+</ul>
+</li>
+<li><p>List vs ArrayList</p>
+<p>Object的equals方法默认和==一样，比较的是地址；</p>
+</li>
+<li><p>JVM</p>
+<p>程序计数器：记录当前线程正在执行的那一条字节码指令的地址；</p>
+<p>java虚拟机栈</p>
+<p>本地方法栈</p>
+<p>堆：在虚拟机启动时创建，垃圾回收的主要场所；</p>
+<p>方法区</p>
+</li>
+<li><p>SSH</p>
+<p>AOP Aspect Oriented Programming</p>
+</li>
+<li><p>web容器</p>
+<ol>
+<li>通信支持，封装一系列复杂操作，我们专注于servlet的业务逻辑</li>
+<li>生命周期管理，容器负责servlet的整个生命周期；不用考虑垃圾回收balabala</li>
+<li>多线程支持，容器为每一个servlet创建java线程，自动结束</li>
+<li>声明式实现安全，xml部署描述文件</li>
+</ol>
+</li>
+<li><p>​</p>
+<p>​</p>
+</li>
+</ul>
+
         
     
 
@@ -578,7 +641,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">4</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">3</span></a>
             </ul>
         </li>
         
