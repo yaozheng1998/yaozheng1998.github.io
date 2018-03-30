@@ -43,7 +43,7 @@
     
     <title>
         
-            标签: notes | 
+            笔记 | 
         
         Mirth
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",notes">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Mirth">
-    <meta name="msapplication-starturl" content="http://yoursite.com/tags/notes/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/03/15/Notes/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Mirth">
@@ -230,13 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/tags/notes/">
+    <meta property="og:url" content="http://yoursite.com/2018/03/15/Notes/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: notes | Mirth">
+    <meta property="og:title" content="笔记 | Mirth">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="notes"> 
 
+    
+        <meta property="article:published_time" content="Thu Mar 15 2018 18:21:19 GMT+0800">
+        <meta property="article:modified_time" content="Fri Mar 30 2018 11:05:33 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -244,13 +247,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/tags/notes/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/03/15/Notes/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2018/03/15/Notes/index.html",
+    "headline": "笔记",
+    "datePublished": "Thu Mar 15 2018 18:21:19 GMT+0800",
+    "dateModified": "Fri Mar 30 2018 11:05:33 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "YZ",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Mirth",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",notes",
+    "description": "",
+}
+</script>
 
 
     
@@ -284,95 +317,313 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#面试题"><span class="post-toc-number">1.</span> <span class="post-toc-text">面试题</span></a></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/15/Notes/">笔记</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-             
-Java多线程
-...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/15/Notes/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="YZ's avatar">
-            </div>
-            <div>
-                <strong>YZ</strong>
-                <span>3月 15, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                笔记
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>YZ</strong>
+        <span>3月 15, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/notes/">notes</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=笔记&url=http://yoursite.com/2018/03/15/Notes/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Mirth&title=笔记&summary=&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2018/03/15/Notes/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <script src="/assets/js/APlayer.min.js"> </script><ul>
+<li><p>Java多线程</p>
+<p>sleep不会释放锁，即使当前线程sleep，其他线程也无法访问其持有的对象；相当于阻塞状态</p>
+<p>yield不会释放锁，只能让拥有相同或更高优先级的线程获取CPU执行时间；重回就绪状态</p>
+<p>start启动线程，run只是定义需要执行的任务</p>
+<p><a href="http://www.importnew.com/21136.html" target="_blank" rel="noopener">http://www.importnew.com/21136.html</a></p>
+<h2 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h2><p><strong>线程和进程有什么区别？</strong><br>答：一个进程是一个独立(self contained)的运行环境，它可以被看作一个程序或者一个应用。而线程是在进程中执行的一个任务。线程是进程的子集，一个进程可以有很多线程，每条线程并行执行不同的任务。<u>不同的进程使用不同的内存空间，而所有的线程共享一片相同的内存空间</u>。别把它和栈内存搞混，每个线程都拥有单独的栈内存用来存储本地数据。</p>
+<p><strong>如何在Java中实现线程？</strong><br>答：<br>创建线程有两种方式：<br>一、继承 Thread 类，扩展线程。<br>二、实现 Runnable 接口。</p>
+<p>三、实现Callable接口</p>
+<p><strong>启动一个线程是调用run()还是start()方法？</strong><br>答：启动一个线程是调用start()方法，使线程所代表的虚拟处理机处于可运行状态，这意味着它可以由JVM 调度并执行，这并不意味着线程就会立即运行。run()方法是线程启动后要进行回调（callback）的方法。</p>
+<p><strong>Thread类的sleep()方法和对象的wait()方法都可以让线程暂停执行，它们有什么区别?</strong><br>答：sleep()方法（休眠）是线程类（Thread）的静态方法，调用此方法会让当前线程暂停执行<u>指定的时间</u>，将执行机会（CPU）让给其他线程，但是对象的锁依然保持，因此休眠时间结束后会<u>自动恢复</u>（线程回到就绪状态）。wait()是Object类的方法，调用对象的wait()方法导致当前线程<u>放弃对象的锁</u>（线程暂停执行），进入对象的等待池（wait pool），只有调用对象的notify()方法（或notifyAll()方法）时才能唤醒等待池中的线程进入等锁池（lock pool），如果线程重新获得对象的锁就可以进入就绪状态。</p>
+<p><strong>线程的sleep()方法和yield()方法有什么区别？</strong><br>① sleep()方法给其他线程运行机会时不考虑线程的优先级，因此会给低优先级的线程以运行的机会；yield()方法只会给相同优先级或更高优先级的线程以运行的机会；<br>② 线程执行sleep()方法后转入阻塞状态，而执行yield()方法后转入就绪状态；<br>③ sleep()方法声明抛出InterruptedException，而yield()方法没有声明任何异常；<br>④ sleep()方法比yield()方法（跟操作系统CPU调度相关）具有更好的可移植性。</p>
+<p><strong>请说出与线程同步以及线程调度相关的方法。</strong></p>
+<ul>
+<li>wait()：使一个线程处于等待（阻塞）状态，并且释放所持有的对象的锁；</li>
+<li>sleep()：使一个正在运行的线程处于睡眠状态，是一个<u>静态方法</u>，调用此方法要处理InterruptedException异常；</li>
+<li>notify()：唤醒一个处于等待状态的线程，当然在调用此方法的时候，并不能确切的唤醒某一个等待状态的线程，而是由JVM确定唤醒哪个线程，而且与优先级无关；</li>
+<li>notityAll()：唤醒所有处于等待状态的线程，该方法并不是将对象的锁给所有线程，而是让它们竞争，只有获得锁的线程才能进入就绪状态；</li>
+</ul>
+</li>
+<li><p>List vs ArrayList</p>
+<p>Object的equals方法默认和==一样，比较的是地址；</p>
+</li>
+<li><p>JVM</p>
+<p>程序计数器：记录当前线程正在执行的那一条字节码指令的地址；</p>
+<p>java虚拟机栈</p>
+<p>本地方法栈</p>
+<p>堆：在虚拟机启动时创建，垃圾回收的主要场所；</p>
+<p>方法区</p>
+</li>
+<li><p>SSH</p>
+<p>AOP Aspect Oriented Programming</p>
+</li>
+<li><p>web容器</p>
+<ol>
+<li>通信支持，封装一系列复杂操作，我们专注于servlet的业务逻辑</li>
+<li>生命周期管理，容器负责servlet的整个生命周期；不用考虑垃圾回收balabala</li>
+<li>多线程支持，容器为每一个servlet创建java线程，自动结束</li>
+<li>声明式实现安全，xml部署描述文件</li>
+</ol>
+</li>
+<li><p>Collection Collections</p>
+<p>Collection集合接口，提供对集合对象进行基本操作的通用接口方法，有很多具体的实现；目的是为各种具体的集合提供最大化的统一操作方式。</p>
+<p>list: linkedlist arraylist vector—&gt;stack</p>
+<p>set    queue    map    </p>
+<p>​</p>
+<p>Collections是包装类，含有各种有关集合操作的静态多态方法，不能实例化；类似工具类，服务于Java的Collection框架。eg: Collections.sort(list);</p>
+</li>
+<li><p>Queue</p>
+<p>线程安全的非阻塞队列ConcurrentLinkedQueue</p>
+<p>阻塞队列 ArrayBlockingQueue</p>
+</li>
+<li><p>阻塞非阻塞 同步异步</p>
+<p>阻塞非阻塞与<strong>等待消息通知时的状态</strong>有关；阻塞指调用结果返回前，当前线程挂起，一直等待消息通知，不执行其他任务，函数只有在得到结果后才返回；</p>
+<p>同步异步与<strong>消息的通知机制，如何通知</strong>有关；</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a.如果线程在等待当前函数返回时，仍在执行其他消息处理，则是同步非阻塞；【行为切换，效率很低】</span><br><span class="line">b.如果线程在等待当前函数返回时，没有执行其他消息处理，而是出于挂起等待态，则同步阻塞</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p>queue remove() poll()都是从队列中删除第一个元素；但是poll在用空集合调用时不是抛出异常，只是返回null；同理，element()抛出异常，而peek()返回null；</p>
+</li>
+<li><p>java二维数组初始化 <a href="https://zhidao.baidu.com/question/383661238.html" target="_blank" rel="noopener">https://zhidao.baidu.com/question/383661238.html</a></p>
+</li>
+<li><p>图的遍历<a href="https://www.cnblogs.com/0kk470/p/7555033.html" target="_blank" rel="noopener">https://www.cnblogs.com/0kk470/p/7555033.html</a></p>
+<p>非加权：BFS先找到的是最短路径</p>
+<p>加权：利用Dijkstra</p>
+</li>
+<li><p>java继承初始化顺序【初始化过程是执行类构造器方法clinit过程】</p>
+<ol>
+<li>父类静态代码区和父类静态成员</li>
+<li>子类静态代码区和子类静态成员</li>
+<li>父类非静态代码区和普通成员</li>
+<li>父类构造函数</li>
+<li>子类非静态代码区和普通成员</li>
+<li>子类构造函数</li>
+</ol>
+<p>涉及到JVM加载机制：</p>
+<ol>
+<li>触发main方法，会先触发类的初始化；</li>
+<li>使用new关键字实例化对象，读取或设置一个类的静态字段【除final】，调用一个类的静态方法，会触发初始化；</li>
+<li>初始化一个类时，如果父类没有初始化，先触发父类；</li>
+</ol>
+</li>
+<li><p>String StringBuilder StringBuffer</p>
+<p>运行速度：StringBuilder&gt;StringBuffer&gt;String</p>
+<p>原因：String是字符串常量，其余两个变量；string + 会新建一个string对象，原来的被GC</p>
+<p>线程安全：StringBuilder不安全 StringBuffer安全</p>
+<p>原因：StringBuffer可以@Synchronized；</p>
+<p>总结：</p>
+<ol>
+<li>String：适用于少量的字符串操作</li>
+<li>StringBuilder：适用于单线程下在字符缓冲区进行大量操作</li>
+<li>StringBuffer：适用于多线程下在字符缓冲区进行大量操作</li>
+</ol>
+</li>
+<li><p>线程安全</p>
+<p>​</p>
+<p>​</p>
+</li>
+</ul>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2018/03/21/前端/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/02/09/Step/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -559,6 +810,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
