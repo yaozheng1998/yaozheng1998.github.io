@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Fri Apr 06 2018 10:10:10 GMT+0800">
-        <meta property="article:modified_time" content="Fri Apr 06 2018 11:51:58 GMT+0800">
+        <meta property="article:modified_time" content="Fri Apr 06 2018 12:04:47 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/04/06/体系结构复习/index.html",
     "headline": "体系结构",
     "datePublished": "Fri Apr 06 2018 10:10:10 GMT+0800",
-    "dateModified": "Fri Apr 06 2018 11:51:58 GMT+0800",
+    "dateModified": "Fri Apr 06 2018 12:04:47 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "YZ",
@@ -505,6 +505,8 @@
 <p><img src="https://raw.githubusercontent.com/yaozheng1998/LearningNotes/master/Exam_Pics/4%2B1视图.png?token=ASWG8xbCQngH9lpDohzFggw1ky9Bu-Rlks5azs6mwA%3D%3D" alt="avatar"></p>
 </li>
 <li><p>符号执行</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">第一种架构：</span><br><span class="line">记录状态，每个状态记录执行过程中的一条程序路径；</span><br><span class="line">状态的内容：PC计数器，符号（符号变量），具体变量和具体值，约束</span><br><span class="line"></span><br><span class="line">第二种架构：</span><br><span class="line">不记录状态，符号执行与具体执行同时进行；每次先具体执行一条路径，再由符号执行求解出另外路径的输入，来执行另外一条路径...知道所有路径都被执行到为止。</span><br><span class="line">stack：<span class="number">0</span>值改成<span class="number">1</span>表示它的<span class="keyword">true</span>／<span class="keyword">false</span>分支都执行过了，约束和栈一一对应的，多少约束条件就对应栈里的多少个数字</span><br></pre></td></tr></table></figure>
+<p>​</p>
 </li>
 <li><p>机器学习框架</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#会话（Session）</span></span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</span><br><span class="line">	result = sess.run([product])</span><br><span class="line">	<span class="keyword">print</span> result</span><br><span class="line"><span class="comment">#设备（device）</span></span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</span><br><span class="line">    <span class="comment"># 指定在第二个gpu上运行</span></span><br><span class="line">    <span class="keyword">with</span> tf.device(<span class="string">"/gpu:1"</span>):</span><br><span class="line">        matrix1 = tf.constant([[<span class="number">3.</span>,<span class="number">3.</span>]])</span><br><span class="line">        matrix2 = tf.constant([[<span class="number">2.</span>],[<span class="number">2.</span>]])</span><br><span class="line">        product = tf.matmul(matrix1,matrix2)</span><br><span class="line">        </span><br><span class="line">Tensorflow架构带来的高性能：</span><br><span class="line">py执行构建数据流时神经网络不执行，不需要很大的数据量，所以构建数据流基本以本地的一台机器完成即可；开session运行时，想办法将其分布在复杂的网络机器上；</span><br><span class="line">设计架构上：先定义数据流图，<span class="number">1.</span>对于用户来说，清晰定义神经网络；<span class="number">2.</span>后台实施角度来说，可以根据定义好的部分分配资源。</span><br></pre></td></tr></table></figure>
@@ -530,6 +532,14 @@
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
+    
+        <a href="/2018/04/08/J2EE复习补充/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
     
 
     <!-- Section Spacer -->
@@ -629,7 +639,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">5</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">5</span></a>
             </ul>
         </li>
         

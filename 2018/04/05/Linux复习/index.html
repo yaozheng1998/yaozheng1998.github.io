@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Thu Apr 05 2018 19:42:05 GMT+0800">
-        <meta property="article:modified_time" content="Fri Apr 06 2018 11:52:12 GMT+0800">
+        <meta property="article:modified_time" content="Sat Apr 07 2018 19:37:40 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/04/05/Linux复习/index.html",
     "headline": "Linux复习",
     "datePublished": "Thu Apr 05 2018 19:42:05 GMT+0800",
-    "dateModified": "Fri Apr 06 2018 11:52:12 GMT+0800",
+    "dateModified": "Sat Apr 07 2018 19:37:40 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "YZ",
@@ -474,7 +474,7 @@
 <p>GNU GPL下免费开源的类Unix操作系统，支持多种硬件平台；</p>
 <p>历史：1984，Richard Stallman starts GNU project</p>
 <p>​           1991，Linus Torvalds writes 1st version of Linux kernel</p>
-<p>​           1992,First Distributions emerge</p>
+<p>​           1992, First Distributions emerge</p>
 <p>主要发行版本：Redhat—&gt;Fedora  Debian Ubuntu SuSe Mandrake</p>
 </li>
 <li><p>GNU与Linux的关系</p>
@@ -482,7 +482,10 @@
 <p>GNU是一个由自由软件构成的类Unix操作系统。Linux应该叫GNU/Linux</p>
 </li>
 <li><p>Linux安装</p>
-<p>​</p>
+<p>​  Choose language, keyboard type, mouse type<br>  Create partitions <strong><br>  Setup a boot loader </strong><br>  Configure network</p>
+<p>  Configure user and authentication</p>
+<p>  Select package groups<br>  Configure X<br>  Install packages</p>
+<p>  Create boot disk</p>
 </li>
 <li><p>选择磁盘文件系统，分区：MBR or GPT</p>
 <p>MBR（Master Boot Record）主引导记录，有自己的启动代码；最大支持2TB（容量瓶颈）</p>
@@ -497,8 +500,7 @@
 </ul>
 </li>
 <li><p><strong><em>启动过程</em></strong></p>
-<p>1）加载BIOS【主板上的固定芯片，控制开机】，包含了CPU的相关信息，设备启动顺序信息，硬盘信息，内存信息，时钟信息等；</p>
-<p>之后BIOS将系统的控制权交给硬盘的第一个扇区，开始由Linux控制系统；</p>
+<p>1）加载BIOS【主板上的固定芯片，控制开机】，包含了CPU的相关信息，设备启动顺序信息，硬盘信息，内存信息，时钟信息等；之后BIOS将系统的控制权交给硬盘的第一个扇区，开始由Linux控制系统；</p>
 <p>2）读取MBR主引导记录，存放着预启动信息，分区表信息；找到MBR后，会复制0x7c00地址的内容（BootLoader）到物理内存；</p>
 <p>3）Boot Loader：加载和启动Linux系统内核；Linux下的BootLoader为GRUB；</p>
 <p>4）init过程，根据inittab文件来设定运行等级。</p>
@@ -507,8 +509,9 @@
 <p>apt-get command *   ； dpkg；   aptitude；yum+rpm</p>
 </li>
 <li><p>文件</p>
-<p> 文件是一堆数据的集合；可以读写的对象，有确定的属性，包括访问权限和类型；byte stream字节流文件；<br>文件类型:</p>
-<p> (-)普通文件:纯文本文档、二进制文件、数据格式文件等</p>
+<p> 文件是一堆数据的集合；可以读写的对象，有确定的属性，包括访问权限和类型；byte stream字节流文件；</p>
+<pre><code>文件类型:
+</code></pre><p> (-)普通文件:纯文本文档、二进制文件、数据格式文件等</p>
 <p> (c)字符设备文件:与设备进行交互的文件。Linux中所有的设备都被抽象为了对应的文件。字符设备是按字符读取。</p>
 <p> (b)块设备文件:同字符设备文件，但是是按块读取。</p>
 <p> (p)数据输送文件，管道文件(FIFO，pipe)。他主要的目的在解决多个程序同时存取一个文件所造成的错误问题。</p>
@@ -575,7 +578,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(command)    `command`</span><br></pre></td></tr></table></figure>
 <p>参数扩展</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$((...))</span><br></pre></td></tr></table></figure>
-<p>​</p>
 </li>
 <li><p>即时文档：在shell脚本中向一条命令传送输入数据；</p>
 </li>
@@ -583,6 +585,11 @@
 <p>执行时，静态库.a比动态库.so效率高一些，但是使用动态库可以减小单个文件的大小，防止单个可执行文件过大。全部使用静态库，不利于维护。</p>
 </li>
 <li><p><strong><em>gcc</em></strong></p>
+</li>
+<li><p>为什么编译分前后端：</p>
+<p>- 编译前端主要包括词法分析、语法分析、语义分析、中间代码生成这几个部分，仅与编译的源语言有关</p>
+<p>- 后端则包含代码优化和目标代码生成部分。仅与编译的目标语言及运行环境有关。</p>
+<p>- 将编译过程划分成前端和后端，主要目的是在多种源语言和多种目标语言的开发过程中，可以灵活搭配组合，消除重复开发的工作量，提高编译系统的开发效率；</p>
 </li>
 <li><p>makefile描述模块间的依赖关系；make命令根据makefile对程序进行管理和维护；make判断被维护文件的时序关系</p>
 </li>
@@ -607,6 +614,34 @@
 <li><p>文件锁</p>
 </li>
 <li><p>标志位</p>
+<p>Linux是有强制锁的，默认不开启；想让Linux支持强制性锁，不但在mount时加上-o mand，而且要对加锁的文件需要设置相关权限；</p>
+<p>使用 -o mand 选项来挂载文件系统。这样在执行 mount() 系统调用时，会传入 MS_MANDLOCK 标记，从而将 super_block 结构中的 s_flags 设置为 1，用来表示在这个文件系统上可以采用强制锁。例如：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># mount -o mand /dev/sdb7 /mnt``</span><br><span class="line"># mount | grep mnt``/dev/sdb7 on /mnt type ext3 (rw,mand)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>命令集合</p>
+<p>more：分页显示文件</p>
+<p>less：与more类似，但可以随意浏览文件；less在查看之前不会加载整个文件；</p>
+<p>nice：调整程序运行的优先级</p>
+<p>renice：可以给正在运行的进程设置调度优先级</p>
+</li>
+<li><p>命令行1.为用户提供了强大的文本编辑器；2.节省资源，进程树比较小；3.不会因为线程被阻塞就停止响应；</p>
+</li>
+<li><p>配置文件</p>
+<p>- title —————— Ubuntu, kernel 2.6.20-16-generic</p>
+<p>- root —————— (hd0,1)</p>
+<p>- kernel —————— /boot/vmlinuz-2.6.20-16-generic root=UUID=3f784cd9-516f-4808-a601– b19356f6bdea ro quiet splash locale=zh_CN vga=0x318</p>
+<p>- initrd —————— /boot/<initrd.img-2.6.20-16-generic></initrd.img-2.6.20-16-generic></p>
+<ul>
+<li><p>title：指定此菜单项的名称，既在grub列表里的名称</p>
+</li>
+<li><p>root：指定启动分区，注意，编号从0开始：比如第一块硬盘的第一个分区应该是(hd0,0)。启动分区的编号可以使用fdisk -l查询，但是需要root权限。</p>
+</li>
+<li><p>kernel：指定启动的内核的绝对路径和名称，后边跟参数，一般来说root参数就是你的根文件系统，一定要有的，可以像范例中使用</p>
+</li>
+</ul>
+<ul>
+<li>initrd：指定系统启动访问真正的根文件系统前，访问的ramdisk映象</li>
+</ul>
 <p>​</p>
 </li>
 </ol>
@@ -736,7 +771,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">5</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">5</span></a>
             </ul>
         </li>
         
